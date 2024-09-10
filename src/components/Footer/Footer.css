@@ -1,0 +1,12 @@
+footer {
+  display: var(--ihc-basic-display);
+  flex-direction: var(--ihc-basic-direction-row);
+  align-items: var(--ihc-basic-align);
+  justify-content: var(--ihc-basic-JContent-center);
+  background-color: var(--ihc-main-BG-color);
+  color: var(--ihc-text-color-black);
+  font-weight: var(--ihc-fontWeight-Bold);
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}

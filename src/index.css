@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+}
+:root {
+  --ihc-basic-display: flex;
+  --ihc-basic-direction-row: row;
+  --ihc-basic-direction-col: column;
+  --ihc-basic-align: center;
+  --ihc-basic-JContent-center: center;
+  --ihc-basic-JContent-SA: space-around;
+  /*Height*/
+  --ihc-header-height: 80px;
+  --ihc-footer-height: 20px;
+
+  /*COLOR*/
+  --ihc-primary-text-color: white;
+  --ihc-text-color-black: black;
+  --ihc-main-BG-color: rgb(93, 184, 241, 0.4);
+
+  /*Font Weight*/
+  --ihc-fontWeight-Bold: bold;
+  /* Border Radius */
+  --ihc-border-radius-xs: 5px;
+  --ihc-border-radius-s: 10px;
+  --ihc-border-radius-m: 15px;
+  --ihc-border-radius-l: 20px;
+  --ihc-border-radius-xl: 50px;
+}
