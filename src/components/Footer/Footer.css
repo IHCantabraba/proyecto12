@@ -4,7 +4,7 @@ footer {
   align-items: var(--ihc-basic-align);
   justify-content: var(--ihc-basic-JContent-center);
   background-color: var(--ihc-main-BG-color);
-  color: var(--ihc-text-color-black);
+  color: var(--ihc-text-color-white);
   font-weight: var(--ihc-fontWeight-Bold);
   position: absolute;
   bottom: 0px;

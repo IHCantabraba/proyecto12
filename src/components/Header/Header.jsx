@@ -5,6 +5,10 @@ import React from 'react'
 const Header = () => {
   return (
     <header>
+      <div id='companyLogo'>
+        <img id='icono' src='../icon_No_BG.png' alt='icono' />
+        <title>Hiking Tracks & Equipment</title>
+      </div>
       <nav>
         <ul>
           <NavLink to='/'>Home</NavLink>
