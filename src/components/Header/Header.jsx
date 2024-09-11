@@ -1,13 +1,23 @@
 import { NavLink } from 'react-router-dom'
 import './Header.css'
-import React from 'react'
+import React, { useState } from 'react'
+import ModalMessage from '../ModalMessage/ModalMessage'
 
 const Header = () => {
+  console.log('soy el HEADER y me renderizo')
+  const [showModal, setShowModal] = useState(false)
+  console.log(showModal)
   return (
     <header>
       <div id='companyLogo'>
         <img id='icono' src='../icon_No_BG.png' alt='icono' />
-        <title>Hiking Tracks & Equipment</title>
+        <title
+          className='header-title'
+          onClick={() => setShowModal(!showModal)}
+        >
+          Hiking Tracks & Equipment
+        </title>
+        {showModal && <ModalMessage state={showModal} action={setShowModal} />}
       </div>
       <nav>
         <ul>

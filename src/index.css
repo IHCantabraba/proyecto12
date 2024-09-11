@@ -20,15 +20,39 @@
   /*COLOR*/
   --ihc-primary-text-color: black;
   --ihc-text-color-white: white;
+  --ihc-text-color-orange: rgb(240, 179, 88);
+  --ihc-text-color-yellow: rgb(246, 230, 110);
   --ihc-main-BG-color: rgb(2, 34, 65);
   --ihc-light-BG-color: rgb(30, 50, 70);
 
   /*Font Weight*/
   --ihc-fontWeight-Bold: bold;
+
+  /* Font size  */
+  --ihc-font-size-xs: 10px;
+  --ihc-font-size-s: 12px;
+  --ihc-font-size-m: 14px;
+  --ihc-font-size-l: 16px;
+  --ihc-font-size-xl: 18px;
+
   /* Border Radius */
   --ihc-border-radius-xs: 5px;
   --ihc-border-radius-s: 10px;
   --ihc-border-radius-m: 15px;
   --ihc-border-radius-l: 20px;
   --ihc-border-radius-xl: 50px;
+  /* BORDER */
+  --ihc-basic-border-color: black;
+  /* basic padding */
+  --ihc-padding-xs: 5px 10px;
+  --ihc-padding-s: 10px 15px;
+  --ihc-padding-m: 15px 20px;
+  --ihc-padding-l: 20px 25px;
+
+  /* GRADIANT COLOR */
+  --ihc-gradiant-color: linear-gradient(
+    135deg,
+    rgba(2, 34, 65, 1) 0%,
+    rgba(240, 179, 88, 1) 100%
+  );
 }

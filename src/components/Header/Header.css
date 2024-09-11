@@ -8,6 +8,7 @@ Header > nav > ul {
 Header {
   justify-content: var(--ihc-basic-JContent-center);
   background-color: var(--ihc-main-BG-color);
+  background: var(--ihc-gradiant-color);
 }
 Header > nav,
 Header > nav > ul {
@@ -16,7 +17,7 @@ Header > nav > ul {
 }
 Header > nav > ul > a {
   padding: 10px 15px;
-  color: var(--ihc-text-color-white);
+  color: var(--ihc-text-color-yellow);
 }
 Header > nav > ul > a:hover {
   background-color: var(--ihc-light-BG-color);
@@ -34,9 +35,20 @@ img {
   width: 10svh;
   rotate: 35deg;
 }
-title {
+.header-title {
   font-size: 20px;
   display: block;
-  color: var(--ihc-text-color-white);
+  color: var(--ihc-text-color-orange);
   cursor: pointer;
+  text-align: center;
+}
+
+@media (max-width: 580px) {
+  .header-title {
+    display: none;
+  }
+  Header > nav > ul > a {
+    padding: 5px 10px;
+    font-size: var(--ihc-font-size-m);
+  }
 }

@@ -1,0 +1,73 @@
+.modal-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 50%;
+  text-align: justify;
+  border-radius: var(--ihc-border-radius-s);
+  padding: var(--ihc-padding-m);
+  box-shadow: 0px 0px 1px 2px var(--ihc-main-BG-color);
+  gap: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(2, 34, 65, 1) 0%,
+    rgba(240, 179, 88, 1) 100%
+  );
+}
+.modal-title {
+  text-decoration: underline;
+  color: var(--ihc-main-text-color);
+  display: block;
+  font-size: var(--ihc-font-size-xl);
+  text-align: center;
+}
+.modal-message > button {
+  padding: 10px 15px;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: var(--ihc-border-radius-s);
+  box-shadow: 1px 1px 1px 1px var(--ihc-main-BG-color);
+  font-weight: bold;
+}
+.modal-message > button:hover {
+  background-color: var(--ihc-light-BG-color);
+  color: var(--ihc-text-color-white);
+}
+.modal-message > ul > li {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+
+@media (max-width: 700px) {
+  .modal-message > p,
+  .modal-message > ul > li {
+    font-size: var(--ihc-font-size-s);
+  }
+  .modal-title {
+    font-size: var(--ihc-font-size-l);
+  }
+  .modal-message > button {
+    padding-inline: var(--ihc-padding-xs);
+    font-size: var(--ihc-font-size-s);
+  }
+  .modal-message {
+    width: 70%;
+    left: 15%;
+  }
+}
+
+@media (max-width: 350px) {
+  .modal-message {
+    width: 90%;
+    left: 5%;
+  }
+}
