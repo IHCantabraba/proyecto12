@@ -2,7 +2,6 @@ import './ModalMessage.css'
 import React from 'react'
 
 const ModalMessage = ({ state, action }) => {
-  console.log(state)
   return (
     <div className='modal-message'>
       <title className='modal-title'>Hiking Tracks & Equipment</title>

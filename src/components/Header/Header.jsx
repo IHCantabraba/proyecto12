@@ -6,7 +6,7 @@ import ModalMessage from '../ModalMessage/ModalMessage'
 const Header = () => {
   console.log('soy el HEADER y me renderizo')
   const [showModal, setShowModal] = useState(false)
-  console.log(showModal)
+
   return (
     <header>
       <div id='companyLogo'>
