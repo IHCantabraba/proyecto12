@@ -47,17 +47,17 @@
   margin-left: 30px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .modal-message > p,
   .modal-message > ul > li {
-    font-size: var(--ihc-font-size-s);
+    font-size: var(--ihc-font-size-m);
   }
   .modal-title {
     font-size: var(--ihc-font-size-l);
   }
   .modal-message > button {
     padding-inline: var(--ihc-padding-xs);
-    font-size: var(--ihc-font-size-s);
+    font-size: var(--ihc-font-size-m);
   }
   .modal-message {
     width: 70%;
