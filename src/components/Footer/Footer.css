@@ -5,7 +5,6 @@ footer {
   justify-content: var(--ihc-basic-JContent-center);
   background-color: var(--ihc-main-BG-color);
   color: var(--ihc-text-color-yellow);
-  font-weight: var(--ihc-fontWeight-Bold);
   position: absolute;
   bottom: 0px;
   width: 100%;

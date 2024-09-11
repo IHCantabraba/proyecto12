@@ -2,7 +2,7 @@ import './RegisterForm.css'
 import React from 'react'
 
 const RegisterForm = () => {
-  return <div>registerForm</div>
+  return <div className='register-form'>registerForm</div>
 }
 
 export default RegisterForm
