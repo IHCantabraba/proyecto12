@@ -3,9 +3,10 @@ footer {
   flex-direction: var(--ihc-basic-direction-row);
   align-items: var(--ihc-basic-align);
   justify-content: var(--ihc-basic-JContent-center);
-  background-color: var(--ihc-main-BG-color);
-  color: var(--ihc-text-color-yellow);
+  background-color: lightgrey; /* var(--ihc-main-BG-color);*/
+  color: black; /* var(--ihc-text-color-yellow); */
   position: absolute;
   bottom: 0px;
   width: 100%;
+  height: var(--ihc-footer-height);
 }

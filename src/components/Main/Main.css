@@ -1,5 +1,9 @@
 main {
   width: var(--ihc-basic-width);
-  min-height: calc(100vh - var(--ihc-header-height) - var(--ihc-footer-height));
-  background-color: rgb(125, 122, 122);
+  min-height: calc(100vh - var(--ihc-header-height));
+  /* background-color: rgb(125, 122, 122); */
+  background-image: url('../main_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  mask-image: linear-gradient(rgb(0, 0, 0) 80%, transparent);
 }

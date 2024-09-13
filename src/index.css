@@ -17,15 +17,15 @@
   --ihc-basic-JContent-SA: space-around;
   /*Height*/
   --ihc-header-height: 80px;
-  --ihc-footer-height: 20px;
+  --ihc-footer-height: 30px;
 
   /*COLOR*/
   --ihc-primary-text-color: black;
   --ihc-text-color-white: white;
   --ihc-text-color-orange: rgb(240, 179, 88);
   --ihc-text-color-yellow: rgb(246, 230, 110);
-  --ihc-main-BG-color: rgb(2, 34, 65);
-  --ihc-light-BG-color: rgb(30, 50, 70);
+  --ihc-main-BG-color: white;
+  --ihc-light-BG-color: rgb(0, 143, 139);
 
   /*Font Weight*/
   --ihc-fontWeight-Bold: bold;

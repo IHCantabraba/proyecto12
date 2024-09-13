@@ -8,7 +8,10 @@ Header > nav > ul {
 Header {
   justify-content: var(--ihc-basic-JContent-center);
   background-color: var(--ihc-main-BG-color);
-  background: var(--ihc-gradiant-color);
+  background-color: rgb(219, 214, 214);
+
+  /* filter: brightness(1.3); */
+  /* background: var(--ihc-gradiant-color); */
 }
 Header > nav,
 Header > nav > ul {
@@ -16,12 +19,13 @@ Header > nav > ul {
   width: 100%;
 }
 Header > nav > ul > a {
-  padding: 10px 15px;
-  color: var(--ihc-text-color-yellow);
+  padding: 5px 10px;
+  color: var(--ihc-primary-text-color); /*var(--ihc-text-color-yellow);*/
 }
 Header > nav > ul > a:hover {
-  background-color: var(--ihc-light-BG-color);
-  border-radius: var(--ihc-border-radius-xs);
+  border-radius: var(--ihc-border-radius-m);
+  border: 1px solid var(--ihc-light-BG-color);
+  color: var(--ihc-light-BG-color);
 }
 Header > div {
   display: flex;
@@ -41,6 +45,7 @@ img {
   color: var(--ihc-text-color-orange);
   cursor: pointer;
   text-align: center;
+  border-right: 1px solid black;
 }
 
 @media (max-width: 580px) {
