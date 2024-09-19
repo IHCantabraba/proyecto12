@@ -163,12 +163,40 @@ const RegisterForm = () => {
             <legend>City</legend>
             <input type='text' id='city' ref={inputCity} />
           </fieldset>
-          <fieldset className='fieldsets'>
-            <legend className='required'>Password</legend>
+          <fieldset
+            style={{
+              border: errors?.validadrContraseña?.message
+                ? borderErrorStyle
+                : fieldsetBorder
+            }}
+            className='fieldsets'
+          >
+            <legend
+              style={{
+                color: errors?.validadrContraseña?.message && 'red'
+              }}
+              className='required'
+            >
+              Password
+            </legend>
             <input type='password' id='password' ref={inputPassword} />
           </fieldset>
-          <fieldset className='fieldsets'>
-            <legend className='required'>Verify Password</legend>
+          <fieldset
+            style={{
+              border: errors?.validadrContraseña?.message
+                ? borderErrorStyle
+                : fieldsetBorder
+            }}
+            className='fieldsets'
+          >
+            <legend
+              style={{
+                color: errors?.validadrContraseña?.message && 'red'
+              }}
+              className='required'
+            >
+              Verify Password
+            </legend>
             <input type='text' id='veryfyPassword' ref={inputVerifyPasword} />
           </fieldset>
           <button className='formBtn'>Registrarse!</button>

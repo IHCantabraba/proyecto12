@@ -5,7 +5,7 @@ export const validateDateOfBirth = (date) => {
   console.log(currentYear)
   console.log(date.slice(0, 4))
   console.log(currentYear - Number(date.slice(0, 4)))
-
+  // TODO arreglar valor vacio.
   if (!currentYear - Number(date.slice(0, 4)) > 16 && data === '') {
     valid = true
   }

@@ -1,5 +1,6 @@
 import { validateDateOfBirth } from './validateDateOfBIrth'
 import { ValidateEmail } from './validateEmail'
+import { validatePassword } from './validatePassword'
 import { validatePhone } from './validatePhone'
 import { validateUser } from './validateUser'
 
@@ -22,11 +23,13 @@ export const formValidator = ({
   const validatedEmail = ValidateEmail(correo)
   const validatedPhone = validatePhone(`${prefix}` + `${String(contacto)}`)
   const validatedDateOfBirth = validateDateOfBirth(fechaNacimiento)
+  const validatePasseword = validatePassword(contraseña, verifyContraseña)
   let validationResults = {
     validarNombre: validatedUser,
     validarCorreo: validatedEmail,
     validarTfno: validatedPhone,
-    validarFechaNaz: validatedDateOfBirth
+    validarFechaNaz: validatedDateOfBirth,
+    validadrContraseña: validatePasseword
   }
   // TODO customizar mensaje de error de cada uno
   for (const [clave, valor] of Object.entries(validationResults)) {
