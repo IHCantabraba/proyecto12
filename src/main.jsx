@@ -7,6 +7,7 @@ import RegisterForm from './pages/RegisterForm/RegisterForm'
 import Products from './pages/Products/Products'
 import Landing from './pages/Landing/Landing'
 import NotFound from './pages/NotFound/NotFound'
+
 createRoot(document.getElementById('root')).render(
   <BrowserRouter basename='/'>
     <Routes>

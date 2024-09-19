@@ -7,8 +7,8 @@ Header > nav > ul {
 }
 Header {
   justify-content: var(--ihc-basic-JContent-center);
-  background-color: var(--ihc-main-BG-color);
-  background-color: rgb(219, 214, 214);
+  background-color: var(--ihc-primary-text-color);
+  mask-image: linear-gradient(rgb(47, 94, 128) 60%, transparent);
 
   /* filter: brightness(1.3); */
   /* background: var(--ihc-gradiant-color); */
@@ -20,7 +20,7 @@ Header > nav > ul {
 }
 Header > nav > ul > a {
   padding: 5px 10px;
-  color: var(--ihc-primary-text-color); /*var(--ihc-text-color-yellow);*/
+  color: var(--ihc-text-color-white); /*var(--ihc-text-color-yellow);*/
 }
 Header > nav > ul > a:hover {
   border-radius: var(--ihc-border-radius-m);

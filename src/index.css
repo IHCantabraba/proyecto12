@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
   list-style: none;
   text-decoration: none;
   border: none;
-  font-family: 'Nerko One', system-ui;
+  font-family: 'SUSE', system-ui;
 }
 :root {
   --ihc-basic-display: flex;
@@ -26,7 +27,8 @@
   --ihc-text-color-yellow: rgb(246, 230, 110);
   --ihc-main-BG-color: white;
   --ihc-light-BG-color: rgb(0, 143, 139);
-
+  /* BAckground Color  */
+  --ihc-BG-Hover-Btn-color: rgb(162, 239, 162);
   /*Font Weight*/
   --ihc-fontWeight-Bold: bold;
 
