@@ -16,8 +16,6 @@ const RegisterForm = () => {
   const inputDateOfBirth = useRef()
   const inputCity = useRef()
   const inputCountry = useRef()
-  const today = new Date()
-  const currentYear = today.getFullYear()
   const inputPassword = useRef()
   const inputVerifyPasword = useRef()
   /* controlar el envío
@@ -45,7 +43,6 @@ const RegisterForm = () => {
     /* si no ha pasado la validación insertar erorres */
     if (!validationResults.validationStatus) {
       console.log(validationResults.errorsResult)
-      console.log('inserting errors')
       setErrors(validationResults.errorsResult)
     }
 
@@ -68,67 +65,82 @@ const RegisterForm = () => {
       <div className='register-page'>
         <h2>Register Form</h2>
         <form onSubmit={submit} className='register-form'>
-          <fieldset
-            style={{
-              border: errors?.validarNombre?.message
-                ? borderErrorStyle
-                : fieldsetBorder
-            }}
-            className='fieldsets'
-          >
-            <legend
-              className='required'
+          <div className='fieldContainer'>
+            <fieldset
               style={{
-                color: errors?.validarNombre?.message && 'red'
+                border: errors?.validarNombre?.message
+                  ? borderErrorStyle
+                  : fieldsetBorder
               }}
+              className='fieldsets'
             >
-              Name
-            </legend>
-            <input type='text' id='name' ref={inputUserName} />
-          </fieldset>
-          <fieldset
-            style={{
-              border: errors?.validarCorreo?.message
-                ? borderErrorStyle
-                : fieldsetBorder
-            }}
-            className='fieldsets'
-          >
-            <legend
-              className='required'
+              <legend
+                className='required'
+                style={{
+                  color: errors?.validarNombre?.message && 'red'
+                }}
+              >
+                Name
+              </legend>
+              <input type='text' id='name' ref={inputUserName} />
+            </fieldset>
+            {errors.validarNombre && (
+              <p className='errorMsg'>{errors.validarNombre.message}</p>
+            )}
+          </div>
+          <div className='fieldContainer'>
+            <fieldset
               style={{
-                color: errors?.validarCorreo?.message && 'red'
+                border: errors?.validarCorreo?.message
+                  ? borderErrorStyle
+                  : fieldsetBorder
               }}
+              className='fieldsets'
             >
-              Email
-            </legend>
-            <input type='text' id='mail' ref={inputMail} />
-          </fieldset>
-          <fieldset
-            style={{
-              border: errors?.validarCorreo?.message
-                ? borderErrorStyle
-                : fieldsetBorder
-            }}
-            className='fieldsets'
-          >
-            <legend
-              className='required'
+              <legend
+                className='required'
+                style={{
+                  color: errors?.validarCorreo?.message && 'red'
+                }}
+              >
+                Email
+              </legend>
+              <input type='text' id='mail' ref={inputMail} />
+            </fieldset>
+            {errors.validarCorreo && (
+              <p className='errorMsg'>{errors.validarCorreo.message}</p>
+            )}
+          </div>
+          <div className='fieldContainer'>
+            <fieldset
               style={{
-                color: errors?.validarCorreo?.message && 'red'
+                border: errors?.validarTfno?.message
+                  ? borderErrorStyle
+                  : fieldsetBorder
               }}
+              className='fieldsets'
             >
-              Phone
-            </legend>
-            <div className='phonediv'>
-              <select name='prefix' id='prefix' ref={inputPrefix}>
-                <option value=' '> </option>
-                <option value='+34'>+34</option>
-                <option value='+49'>+49</option>
-              </select>
-              <input type='number' id='Contact' ref={inputContact} />
-            </div>
-          </fieldset>
+              <legend
+                className='required'
+                style={{
+                  color: errors?.validarTfno?.message && 'red'
+                }}
+              >
+                Phone
+              </legend>
+              <div className='phonediv'>
+                <select name='prefix' id='prefix' ref={inputPrefix}>
+                  <option value=' '> </option>
+                  <option value='+34'>+34</option>
+                  <option value='+49'>+49</option>
+                </select>
+                <input type='number' id='Contact' ref={inputContact} />
+              </div>
+            </fieldset>
+            {errors?.validarTfno && (
+              <p className='errorMsg'>{errors.validarTfno.message}</p>
+            )}
+          </div>
           <fieldset className='fieldsets'>
             <legend>Gender</legend>
             <select id='Gender' ref={inputGender}>
@@ -137,24 +149,29 @@ const RegisterForm = () => {
               <option value='male'>Male</option>
             </select>
           </fieldset>
-          <fieldset
-            style={{
-              border: errors?.validarFechaNaz?.message
-                ? borderErrorStyle
-                : fieldsetBorder
-            }}
-            className='fieldsets'
-          >
-            <legend
+          <div className='fieldContainer'>
+            <fieldset
               style={{
-                color: errors?.validarFechaNaz?.message && 'red'
+                border: errors?.validarFechaNaz?.message
+                  ? borderErrorStyle
+                  : fieldsetBorder
               }}
-              className='required'
+              className='fieldsets'
             >
-              Date of birth
-            </legend>
-            <input type='date' id='birthday' ref={inputDateOfBirth} />
-          </fieldset>
+              <legend
+                style={{
+                  color: errors?.validarFechaNaz?.message && 'red'
+                }}
+                className='required'
+              >
+                Date of birth
+              </legend>
+              <input type='date' id='birthday' ref={inputDateOfBirth} />
+            </fieldset>
+            {errors.validarFechaNaz && (
+              <p className='errorMsg'>{errors.validarFechaNaz.message}</p>
+            )}
+          </div>
           <fieldset className='fieldsets'>
             <legend>Country</legend>
             <input type='text' id='country' ref={inputCountry} />
@@ -163,42 +180,60 @@ const RegisterForm = () => {
             <legend>City</legend>
             <input type='text' id='city' ref={inputCity} />
           </fieldset>
-          <fieldset
-            style={{
-              border: errors?.validadrContraseña?.message
-                ? borderErrorStyle
-                : fieldsetBorder
-            }}
-            className='fieldsets'
-          >
-            <legend
+          <div className='fieldContainer'>
+            <fieldset
               style={{
-                color: errors?.validadrContraseña?.message && 'red'
+                border: errors?.validarContraseña?.message
+                  ? borderErrorStyle
+                  : fieldsetBorder
               }}
-              className='required'
+              className='fieldsets'
             >
-              Password
-            </legend>
-            <input type='password' id='password' ref={inputPassword} />
-          </fieldset>
-          <fieldset
-            style={{
-              border: errors?.validadrContraseña?.message
-                ? borderErrorStyle
-                : fieldsetBorder
-            }}
-            className='fieldsets'
-          >
-            <legend
+              <legend
+                style={{
+                  color: errors?.validarContraseña?.message && 'red'
+                }}
+                className='required'
+              >
+                Password
+              </legend>
+              <input type='password' id='password' ref={inputPassword} />
+            </fieldset>
+            {errors.validarContraseña ? (
+              <p className='errorMsg'>{errors.validarContraseña.message}</p>
+            ) : (
+              errors.validaMatch && (
+                <p className='errorMsg'>{errors.validarMatch.message}</p>
+              )
+            )}
+          </div>
+          <div className='fieldContainer'>
+            <fieldset
               style={{
-                color: errors?.validadrContraseña?.message && 'red'
+                border: errors?.validarMatch?.message
+                  ? borderErrorStyle
+                  : fieldsetBorder
               }}
-              className='required'
+              className='fieldsets'
             >
-              Verify Password
-            </legend>
-            <input type='text' id='veryfyPassword' ref={inputVerifyPasword} />
-          </fieldset>
+              <legend
+                style={{
+                  color: errors?.validarMatch?.message && 'red'
+                }}
+                className='required'
+              >
+                Verify Password
+              </legend>
+              <input
+                type='password'
+                id='veryfyPassword'
+                ref={inputVerifyPasword}
+              />
+            </fieldset>
+            {errors.validarMatch && (
+              <p className='errorMsg'>{errors.validarMatch.message}</p>
+            )}
+          </div>
           <button className='formBtn'>Registrarse!</button>
         </form>
       </div>

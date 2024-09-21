@@ -72,6 +72,35 @@
 .required::after {
   content: ' *';
 }
+.errorMsg {
+  font-size: var(--ihc-font-size-s);
+  color: red;
+}
+.correctMsg {
+  font-size: var(--ihc-font-size-s);
+  color: rgb(138, 241, 93);
+}
+.correctMsg::before {
+  content: url('greenCheck.png');
+  /* display: inline-block; */
+  width: 5px;
+  height: 5px;
+}
+.errorMsg::before {
+  background-image: url('./redcross.png');
+  background-size: 10px 10px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  content: ' ';
+}
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
 @media (max-width: 1000px) {
   .register-form {
     grid-gap: 40px;

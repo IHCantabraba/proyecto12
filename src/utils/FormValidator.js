@@ -3,7 +3,7 @@ import { ValidateEmail } from './validateEmail'
 import { validatePassword } from './validatePassword'
 import { validatePhone } from './validatePhone'
 import { validateUser } from './validateUser'
-
+import { validatematch } from './validateMatchingPass'
 export const formValidator = ({
   nombre,
   correo,
@@ -24,21 +24,33 @@ export const formValidator = ({
   const validatedPhone = validatePhone(`${prefix}` + `${String(contacto)}`)
   const validatedDateOfBirth = validateDateOfBirth(fechaNacimiento)
   const validatePasseword = validatePassword(contraseña, verifyContraseña)
+  const matchingPassword = validatematch(contraseña, verifyContraseña)
   let validationResults = {
-    validarNombre: validatedUser,
-    validarCorreo: validatedEmail,
-    validarTfno: validatedPhone,
-    validarFechaNaz: validatedDateOfBirth,
-    validadrContraseña: validatePasseword
+    validarNombre: { value: validatedUser, message: '4 chars at least' },
+    validarCorreo: { value: validatedEmail, message: 'Bad email pattern' },
+    validarTfno: { value: validatedPhone, message: 'Phone number error' },
+    validarFechaNaz: {
+      value: validatedDateOfBirth,
+      message: '16 years  or older'
+    },
+    validarContraseña: {
+      value: validatePasseword,
+      message: ' 8 chras, 1 number 1 letter'
+    },
+    validarMatch: {
+      value: matchingPassword,
+      message: 'password mismatch or empty'
+    }
   }
   // TODO customizar mensaje de error de cada uno
   for (const [clave, valor] of Object.entries(validationResults)) {
-    console.log(`${clave}: ${valor}`)
-    if (valor === false) {
-      console.log(`valor de la clave ${clave} no ha pasado el filtro`)
+    if (valor.value === false) {
       dataErrors = {
         ...dataErrors,
-        [clave]: { message: `valor del campo ${clave} invalido`, ref: valor }
+        [clave]: {
+          message: valor.message,
+          ref: valor.value
+        }
       }
 
       status = false
