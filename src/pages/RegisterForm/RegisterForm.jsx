@@ -141,14 +141,22 @@ const RegisterForm = () => {
               <p className='errorMsg'>{errors.validarTfno.message}</p>
             )}
           </div>
-          <fieldset className='fieldsets'>
-            <legend>Gender</legend>
-            <select id='Gender' ref={inputGender}>
-              <option value='unspecified'>-</option>
-              <option value='female'>Female</option>
-              <option value='male'>Male</option>
-            </select>
-          </fieldset>
+          <div className='fieldContainer'>
+            <fieldset className='fieldsets'>
+              <legend>Gender</legend>
+              <select id='Gender' ref={inputGender}>
+                <option className='options' value='unspecified'>
+                  -
+                </option>
+                <option className='options' value='female'>
+                  Female
+                </option>
+                <option className='options' value='male'>
+                  Male
+                </option>
+              </select>
+            </fieldset>
+          </div>
           <div className='fieldContainer'>
             <fieldset
               style={{
@@ -172,14 +180,18 @@ const RegisterForm = () => {
               <p className='errorMsg'>{errors.validarFechaNaz.message}</p>
             )}
           </div>
-          <fieldset className='fieldsets'>
-            <legend>Country</legend>
-            <input type='text' id='country' ref={inputCountry} />
-          </fieldset>
-          <fieldset className='fieldsets'>
-            <legend>City</legend>
-            <input type='text' id='city' ref={inputCity} />
-          </fieldset>
+          <div className='fieldContainer'>
+            <fieldset className='fieldsets'>
+              <legend>Country</legend>
+              <input type='text' id='country' ref={inputCountry} />
+            </fieldset>
+          </div>
+          <div className='fieldContainer'>
+            <fieldset className='fieldsets'>
+              <legend>City</legend>
+              <input type='text' id='city' ref={inputCity} />
+            </fieldset>
+          </div>
           <div className='fieldContainer'>
             <fieldset
               style={{
