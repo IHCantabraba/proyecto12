@@ -1,4 +1,5 @@
 import './RegisterForm.css'
+
 import React, { useRef, useState } from 'react'
 import { formValidator } from '../../utils/FormValidator'
 
@@ -142,9 +143,9 @@ const RegisterForm = () => {
             )}
           </div>
           <div className='fieldContainer'>
-            <fieldset className='fieldsets'>
+            <fieldset className='fieldsets gender'>
               <legend>Gender</legend>
-              <select id='Gender' ref={inputGender}>
+              <select className='gender-select' id='Gender' ref={inputGender}>
                 <option className='options' value='unspecified'>
                   -
                 </option>

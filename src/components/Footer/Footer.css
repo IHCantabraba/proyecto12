@@ -5,8 +5,8 @@ footer {
   justify-content: var(--ihc-basic-JContent-center);
   background-color: lightgrey; /* var(--ihc-main-BG-color);*/
   color: black; /* var(--ihc-text-color-yellow); */
-  /* position: absolute;
-  bottom: 0px; */
-  width: 100%;
+  position: relative;
+  margin-top: -var(--ihc-footer-height);
   height: var(--ihc-footer-height);
+  clear: both;
 }
