@@ -43,7 +43,6 @@ img {
   font-size: 20px;
   display: block;
   color: var(--ihc-text-color-orange);
-  cursor: pointer;
   text-align: center;
   border-right: 1px solid black;
 }

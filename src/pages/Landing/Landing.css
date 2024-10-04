@@ -4,16 +4,30 @@
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  top: 30%;
   left: 30%;
+  top: 30%;
   width: 40%;
   height: 50%;
   text-align: justify;
   border-radius: var(--ihc-border-radius-s);
-  border: 1px solid var(--ihc-basic-border-color);
+  /* border: 1px solid var(--ihc-basic-border-color); */
   padding: var(--ihc-padding-m);
   gap: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(255, 255, 255, 0.35);
+  transition: top 2s;
+  animation: slideIn 1.5s;
+  box-shadow: 2px 2px 4px 4px rgb(152, 178, 187);
+}
+@keyframes slideIn {
+  0% {
+    top: -600px;
+  }
+
+  100% {
+    display: flex;
+    left: 30%;
+    top: 30%;
+  }
 }
 .modal-title {
   text-decoration: underline;
