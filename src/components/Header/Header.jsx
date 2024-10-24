@@ -6,7 +6,12 @@ const Header = () => {
   return (
     <header>
       <div id='companyLogo'>
-        <img id='icono' src='../icon_No_BG.png' alt='icono' />
+        <img
+          className='header-img'
+          id='icono'
+          src='../icon_No_BG.png'
+          alt='icono'
+        />
         <title className='header-title'>Hiking Tracks & Equipment</title>
       </div>
       <nav>

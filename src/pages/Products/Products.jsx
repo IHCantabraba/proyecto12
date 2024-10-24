@@ -1,8 +1,24 @@
+import React, { useEffect, useState } from 'react'
+import { getProducts } from '../../api/db'
+import Product from '../../components/Product/Product'
 import './Products.css'
-import React from 'react'
 
 const Products = () => {
-  return <div>Productos</div>
+  const [productos, setProducts] = useState([])
+  useEffect(() => {
+    const prod = getProducts()
+    setProducts(prod)
+  }, [productos])
+
+  return (
+    <section className='producuts'>
+      {productos.map((producto) => (
+        <div className='pruduct-row' key={producto.id}>
+          <Product prod={producto}></Product>
+        </div>
+      ))}
+    </section>
+  )
 }
 
 export default Products

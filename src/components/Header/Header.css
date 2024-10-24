@@ -37,6 +37,8 @@ Header > div {
 img {
   height: 10svh;
   width: 10svh;
+}
+.header-img {
   rotate: 35deg;
 }
 .header-title {

@@ -1,0 +1,97 @@
+.container-prod {
+  border: 2px solid var(--ihc-basic-border);
+  border-radius: var(--ihc-border-radius-xs);
+  box-shadow: var(--ihc-basic-shadow);
+  padding: var(--ihc-basic-margin);
+  display: var(--ihc-basic-display);
+  flex-direction: var(--ihc-basic-direction-col);
+  align-items: var(--ihc-basic-align);
+  justify-content: var(--ihc-basic-JContent-center);
+  gap: var(--ihc-basic-gap);
+  min-height: var(--ihc-min-height-card-xl);
+  position: relative;
+  background-color: white;
+  transition: transform 0.5s;
+  width: 100%;
+  margin: 10px;
+}
+.prod-img {
+  width: var(--ihc-basic-half-width);
+  border-radius: var(--ihc-border-radius-round);
+}
+.episode-link {
+  font-size: 10px;
+}
+.product-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.prod-megusta {
+  width: 25px;
+  height: 25px;
+  align-self: flex-end;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.stars {
+  cursor: pointer;
+}
+.container-epi:hover {
+  outline: 3px solid rgb(231, 166, 61);
+  transform: scale(1.05) rotate(1deg);
+
+  background-color: rgb(240, 230, 144);
+}
+.container-epi:hover > img {
+  width: 40%;
+  height: 50%;
+}
+.container-epi:hover > .episode-link {
+  font-size: 20px;
+  text-align: center;
+}
+
+div.stars {
+  width: 270px;
+  display: inline-block;
+}
+input.star {
+  display: none;
+}
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #444;
+  transition: all 0.2s;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #fd4;
+  transition: all 0.25s;
+}
+input.star-5:checked ~ label.star:before {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+input.star-1:checked ~ label.star:before {
+  color: #f62;
+}
+label.star:hover {
+  transform: rotate(-15deg) scale(1.3);
+}

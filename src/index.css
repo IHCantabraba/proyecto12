@@ -10,16 +10,19 @@
   font-family: 'SUSE', system-ui;
 }
 :root {
+  /* DISPLAY */
   --ihc-basic-display: flex;
   --ihc-basic-direction-row: row;
   --ihc-basic-direction-col: column;
   --ihc-basic-align: center;
   --ihc-basic-JContent-center: center;
   --ihc-basic-JContent-SA: space-around;
+  /* GAP */
+  --ihc-basic-gap: 10px;
+
   /*Height*/
   --ihc-header-height: 80px;
   --ihc-footer-height: 30px;
-
   /*COLOR*/
   --ihc-primary-text-color: black;
   --ihc-text-color-white: white;
@@ -27,8 +30,9 @@
   --ihc-text-color-yellow: rgb(246, 230, 110);
   --ihc-main-BG-color: white;
   --ihc-light-BG-color: rgb(0, 143, 139);
-  /* BAckground Color  */
+  /* Background Color  */
   --ihc-BG-Hover-Btn-color: rgb(162, 239, 162);
+
   /*Font Weight*/
   --ihc-fontWeight-Bold: bold;
 
@@ -47,6 +51,7 @@
   --ihc-border-radius-xl: 50px;
   /* BORDER */
   --ihc-basic-border-color: black;
+  --ihc-basic-border: white;
   /* basic padding */
   --ihc-padding-xs: 5px 10px;
   --ihc-padding-s: 10px 15px;
