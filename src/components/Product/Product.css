@@ -16,23 +16,27 @@
   margin: 10px;
 }
 .prod-img {
-  width: var(--ihc-basic-half-width);
+  width: 200px;
+  height: 200px;
   border-radius: var(--ihc-border-radius-round);
 }
 .episode-link {
   font-size: 10px;
 }
-.product-status {
+.product-status,
+.product-origin {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
 }
+.product-origin {
+  justify-content: space-around;
+}
 .prod-megusta {
-  width: 25px;
-  height: 25px;
-  align-self: flex-end;
+  width: 30px;
+  height: 30px;
+  align-self: center;
   margin-right: 5px;
   cursor: pointer;
 }
@@ -52,46 +56,4 @@
 .container-epi:hover > .episode-link {
   font-size: 20px;
   text-align: center;
-}
-
-div.stars {
-  width: 270px;
-  display: inline-block;
-}
-input.star {
-  display: none;
-}
-label.star {
-  float: right;
-  padding: 10px;
-  font-size: 36px;
-  color: #444;
-  transition: all 0.2s;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-}
-input.star:checked ~ label.star:before {
-  content: '\f005';
-  color: #fd4;
-  transition: all 0.25s;
-}
-input.star-5:checked ~ label.star:before {
-  color: #fe7;
-  text-shadow: 0 0 20px #952;
-}
-input.star-1:checked ~ label.star:before {
-  color: #f62;
-}
-label.star:hover {
-  transform: rotate(-15deg) scale(1.3);
 }
