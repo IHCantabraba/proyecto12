@@ -7,9 +7,11 @@ import React, {
 } from 'react'
 
 import './Favourites.css'
+import { getProducts } from '../../api/db'
 
 const CartStateContext = createContext()
 const CartDispatchContext = createContext()
+const ProductsContext = createContext()
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -31,13 +33,17 @@ const reducer = (state, action) => {
 }
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, [])
+  const totalProducts = getProducts()
   return (
     <CartDispatchContext.Provider value={dispatch}>
       <CartStateContext.Provider value={state}>
-        {children}
+        <ProductsContext.Provider value={totalProducts}>
+          {children}
+        </ProductsContext.Provider>
       </CartStateContext.Provider>
     </CartDispatchContext.Provider>
   )
 }
 export const useCart = () => useContext(CartStateContext)
 export const useDispathcCart = () => useContext(CartDispatchContext)
+export const useTotalProducts = () => useContext(ProductsContext)

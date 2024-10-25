@@ -12,15 +12,16 @@
   position: relative;
   background-color: white;
   transition: transform 0.5s;
-  width: 100%;
-  margin: 10px;
+  width: 90%;
+  margin: 5px;
 }
+
 .prod-img {
   width: 200px;
   height: 200px;
   border-radius: var(--ihc-border-radius-round);
 }
-.episode-link {
+.prod-link {
   font-size: 10px;
 }
 .product-status,
@@ -32,12 +33,16 @@
   justify-content: space-around;
 }
 
-.prod-megusta {
-  width: 30px;
-  height: 30px;
+.prod-megusta,
+.prod-megusta-dislike {
+  width: 40px;
+  height: 40px;
   align-self: center;
   margin-right: 5px;
   cursor: pointer;
+}
+.prod-megusta-dislike {
+  rotate: 180deg;
 }
 .stars {
   cursor: pointer;

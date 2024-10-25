@@ -1,8 +1,67 @@
 .producuts {
+  max-width: 100%;
+  display: grid;
+  margin: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.filter {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  max-width: 9rem;
+  gap: 20px;
+  background-color: var(--ihc-text-color-orange);
+  border-radius: 5px;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 10px;
+  margin-left: 45%;
+  padding-top: 0.5rem;
+}
+@media (max-width: 930px) {
+  .producuts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  .producuts {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 60%;
+    margin-left: 7rem;
+  }
+  .filter {
+    margin-left: 35%;
+  }
+}
+@media (max-width: 450px) {
+  .producuts {
+    margin-left: 6rem;
+  }
+}
+@media (max-width: 400px) {
+  .producuts {
+    margin-left: 5rem;
+  }
+}
+@media (max-width: 370px) {
+  .producuts {
+    margin-left: 4rem;
+  }
+}
+
+.filter > button {
+  max-width: 4rem;
+  align-self: center;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.filter > select {
+  border-radius: 5px;
+  text-align: center;
+  max-width: 99%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.filter > label {
+  align-items: center;
 }

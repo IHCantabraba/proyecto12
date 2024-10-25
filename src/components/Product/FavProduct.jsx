@@ -9,18 +9,6 @@ const FavProduct = ({ prod }) => {
     dispatch({ type: 'REMOVE', index })
   }
 
-  /*   cambiar el color del corazon   */
-  const [like, setlike] = useState(false)
-  const HandleLikeProduct = (prod) => {
-    setlike(!like)
-  }
-
-  const HandleFavoutirte = (prod) => {
-    prod.favourite = !prod.favourite
-    console.log(prod.favourite)
-  }
-
-  console.log()
   return (
     <>
       <div className='container-prod'>
@@ -39,8 +27,8 @@ const FavProduct = ({ prod }) => {
         <div className='product-status'>
           <Rating />
           <img
-            className='prod-megusta'
-            src={like ? 'liked.png' : 'like.png'}
+            className='prod-megusta-dislike'
+            src={'dislike.png'}
             alt={'megusta'}
             onClick={() => handleRemove(prod)}
           />

@@ -1,11 +1,3 @@
-.producuts {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 10px;
-}
 .favproducs {
   display: flex;
   flex-direction: row;
@@ -14,6 +6,7 @@
   width: 100%;
   gap: 10px;
   padding-top: 25%;
+  text-align: center;
 }
 .favproducs > p {
   font-weight: bold;
