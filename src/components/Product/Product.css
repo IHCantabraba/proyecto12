@@ -29,10 +29,9 @@
   flex-direction: row;
   align-items: center;
   width: 100%;
-}
-.product-origin {
   justify-content: space-around;
 }
+
 .prod-megusta {
   width: 30px;
   height: 30px;

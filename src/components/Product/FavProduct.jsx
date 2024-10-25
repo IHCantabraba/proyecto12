@@ -3,12 +3,10 @@ import React, { useReducer, useState } from 'react'
 import { Rating } from 'react-simple-star-rating'
 import { Link } from 'react-router-dom'
 import { useDispathcCart } from '../Favourites/Favourites'
-const Product = ({ prod }) => {
+const FavProduct = ({ prod }) => {
   const dispatch = useDispathcCart()
-  const handleClick = (item) => {
-    console.log(item)
-    HandleLikeProduct(item)
-    dispatch({ type: 'ADD', item })
+  const handleRemove = (index) => {
+    dispatch({ type: 'REMOVE', index })
   }
 
   /*   cambiar el color del corazon   */
@@ -44,11 +42,11 @@ const Product = ({ prod }) => {
             className='prod-megusta'
             src={like ? 'liked.png' : 'like.png'}
             alt={'megusta'}
-            onClick={() => handleClick(prod)}
+            onClick={() => handleRemove(prod)}
           />
         </div>
       </div>
     </>
   )
 }
-export default Product
+export default FavProduct

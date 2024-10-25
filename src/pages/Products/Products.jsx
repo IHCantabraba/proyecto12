@@ -4,10 +4,9 @@ import Product from '../../components/Product/Product'
 import './Products.css'
 
 const Products = () => {
-  const [productos, setProducts] = useState([])
+  const [productos, setProducts] = useState(getProducts())
   useEffect(() => {
-    const prod = getProducts()
-    setProducts(prod)
+    setProducts(productos)
   }, [productos])
 
   return (
