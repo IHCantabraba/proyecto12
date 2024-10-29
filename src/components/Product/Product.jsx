@@ -6,7 +6,6 @@ import { useDispathcCart } from '../Favourites/Favourites'
 const Product = ({ prod }) => {
   const dispatch = useDispathcCart()
   const handleClick = (item) => {
-    console.log(item)
     HandleLikeProduct()
     dispatch({ type: 'ADD', item })
   }
