@@ -17,12 +17,6 @@ const Product = ({ prod }) => {
     setlike(!like)
   }
 
-  const HandleFavoutirte = (prod) => {
-    prod.favourite = !prod.favourite
-    console.log(prod.favourite)
-  }
-
-  console.log()
   return (
     <>
       <div className='container-prod'>
@@ -32,11 +26,13 @@ const Product = ({ prod }) => {
           <h4 className='prod-marca'>{prod.marca}</h4>
           <h4 className='prod-modelo'>{prod.modelo}</h4>
         </div>
-        <h2 className='prod-precio'>{prod.precio}</h2>
-        <div className='prod-link'>
-          <Link to={prod.url} target='_blank'>
-            Ver producto
-          </Link>
+        <div className='price-link'>
+          <h2 className='prod-precio'>{prod.precio}</h2>
+          <div className='prod-link'>
+            <Link to={prod.url} target='_blank'>
+              Ver producto
+            </Link>
+          </div>
         </div>
         <div className='product-status'>
           <Rating />

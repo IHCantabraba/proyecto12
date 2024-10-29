@@ -10,7 +10,7 @@
   gap: var(--ihc-basic-gap);
   min-height: var(--ihc-min-height-card-xl);
   position: relative;
-  background-color: white;
+  background-color: rgb(244, 241, 241);
   transition: transform 0.5s;
   width: 90%;
   margin: 5px;
@@ -19,10 +19,23 @@
 .prod-img {
   width: 200px;
   height: 200px;
-  border-radius: var(--ihc-border-radius-round);
+  border-radius: var(--ihc-border-radius-s);
+}
+.price-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 90%;
 }
 .prod-link {
   font-size: 10px;
+}
+.prod-link > a {
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
 }
 .product-status,
 .product-origin {
@@ -40,24 +53,16 @@
   align-self: center;
   margin-right: 5px;
   cursor: pointer;
+  box-shadow: 4px 4px 4px 4px solid black;
 }
 .prod-megusta-dislike {
   rotate: 180deg;
 }
+
 .stars {
   cursor: pointer;
 }
-.container-epi:hover {
-  outline: 3px solid rgb(231, 166, 61);
+.container-prod:hover {
+  outline: 2px solid rgb(188, 178, 161);
   transform: scale(1.05) rotate(1deg);
-
-  background-color: rgb(240, 230, 144);
-}
-.container-epi:hover > img {
-  width: 40%;
-  height: 50%;
-}
-.container-epi:hover > .episode-link {
-  font-size: 20px;
-  text-align: center;
 }
