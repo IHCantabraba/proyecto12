@@ -1,5 +1,5 @@
 import './Product.css'
-import React, { useReducer, useState } from 'react'
+import React, { useState } from 'react'
 import { Rating } from 'react-simple-star-rating'
 import { Link } from 'react-router-dom'
 import { useDispathcCart } from '../Favourites/Favourites'
@@ -7,13 +7,13 @@ const Product = ({ prod }) => {
   const dispatch = useDispathcCart()
   const handleClick = (item) => {
     console.log(item)
-    HandleLikeProduct(item)
+    HandleLikeProduct()
     dispatch({ type: 'ADD', item })
   }
 
   /*   cambiar el color del corazon   */
   const [like, setlike] = useState(false)
-  const HandleLikeProduct = (prod) => {
+  const HandleLikeProduct = () => {
     setlike(!like)
   }
 
