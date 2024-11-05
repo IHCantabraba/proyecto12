@@ -1,12 +1,4 @@
-import React, {
-  useEffect,
-  useState,
-  useReducer,
-  useContext,
-  createContext
-} from 'react'
-
-import './Favourites.css'
+import React, { useReducer, useContext, createContext } from 'react'
 import { getProducts } from '../../api/db'
 
 const CartStateContext = createContext()

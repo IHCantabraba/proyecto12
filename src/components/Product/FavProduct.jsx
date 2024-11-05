@@ -2,7 +2,7 @@ import './Product.css'
 import React, { useReducer, useState } from 'react'
 import { Rating } from 'react-simple-star-rating'
 import { Link } from 'react-router-dom'
-import { useDispathcCart } from '../Favourites/Favourites'
+import { useDispathcCart } from '../CustomProvider/CustomProvider'
 const FavProduct = ({ prod }) => {
   const dispatch = useDispathcCart()
   const handleRemove = (index) => {

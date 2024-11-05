@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { getProducts } from '../../api/db'
 import Product from '../../components/Product/Product'
 import './Products.css'
-
+import { useTotalProducts } from '../../components/CustomProvider/CustomProvider'
 const Products = () => {
+  const productAmount = useTotalProducts()
+
+  console.log('soy el HEADER y me renderizo')
+
   const [productos, setProducts] = useState(getProducts())
   const [filter, setFilter] = useState('Show All')
   const categories = [...new Set(getProducts().map((prod) => prod.category))]
@@ -19,7 +23,7 @@ const Products = () => {
           onChange={(e) => setFilter(e.target.value)}
           placeholder='filter'
         >
-          <option value='Show All'>Show All</option>
+          <option value='Show All'>Show All ({productAmount.length})</option>
           {categories.map((cat) => (
             <option>{cat}</option>
           ))}

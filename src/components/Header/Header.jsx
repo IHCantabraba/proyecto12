@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom'
 import './Header.css'
 import React from 'react'
-import { useCart } from '../../components/Favourites/Favourites'
+import { useCart } from '../CustomProvider/CustomProvider'
+
 const Header = () => {
   const items = useCart()
-  console.log('soy el HEADER y me renderizo')
+
   return (
     <header>
       <div id='companyLogo'>

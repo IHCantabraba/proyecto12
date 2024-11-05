@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { getProducts } from '../../api/db'
 import FavProduct from '../../components/Product/FavProduct'
 import './FavProducts.css'
-import { useCart } from '../../components/Favourites/Favourites'
+import { useCart } from '../../components/CustomProvider/CustomProvider'
 const FavProducts = () => {
   const items = useCart()
 

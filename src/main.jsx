@@ -1,14 +1,14 @@
 import App from './App'
 import './index.css'
 import { createRoot } from 'react-dom/client'
-import React, { StrictMode } from 'react'
+import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import RegisterForm from './pages/RegisterForm/RegisterForm'
 import Products from './pages/Products/Products'
 import Landing from './pages/Landing/Landing'
 import NotFound from './pages/NotFound/NotFound'
 import FavProducts from './pages/FavProducts/FavProducts'
-import { CartProvider } from './components/Favourites/Favourites'
+import { CartProvider } from './components/CustomProvider/CustomProvider'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter basename='/'>
     <CartProvider>
