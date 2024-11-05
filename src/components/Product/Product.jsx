@@ -34,7 +34,7 @@ const Product = ({ prod }) => {
           </div>
         </div>
         <div className='product-status'>
-          <Rating />
+          <Rating name='rating-small' defaultValue={2} size='30px' />
           <img
             className='prod-megusta'
             src={like ? 'liked.png' : 'like.png'}
