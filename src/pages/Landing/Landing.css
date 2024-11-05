@@ -25,7 +25,8 @@
 
   100% {
     display: flex;
-    left: 30%;
+    flex-wrap: wrap;
+
     top: 30%;
   }
 }
